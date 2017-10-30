@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tankgame", "tankgame.csproj", "{EDCC9679-E85E-FB7B-1CDF-00A20BADBB70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tankgame.Editor", "tankgame.Editor.csproj", "{51F2E445-9BFA-A989-1D4E-19729854AB3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDCC9679-E85E-FB7B-1CDF-00A20BADBB70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCC9679-E85E-FB7B-1CDF-00A20BADBB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCC9679-E85E-FB7B-1CDF-00A20BADBB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCC9679-E85E-FB7B-1CDF-00A20BADBB70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51F2E445-9BFA-A989-1D4E-19729854AB3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51F2E445-9BFA-A989-1D4E-19729854AB3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51F2E445-9BFA-A989-1D4E-19729854AB3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51F2E445-9BFA-A989-1D4E-19729854AB3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

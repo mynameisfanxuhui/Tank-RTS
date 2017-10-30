@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{EDCC9679-E85E-FB7B-1CDF-00A20BADBB70}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Tank/TankMovement.cs">
+    <Files>
+      <File FileName="Assets/Scripts/MoveControl.cs" Line="6" Column="5" />
+      <File FileName="Assets/Scripts/Mouse/MouseManager.cs" Line="31" Column="6" />
+      <File FileName="Assets/Scripts/Tank/TankMovement.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.tankgame PreferredExecutionTarget="Unity.Editor" />
+</Properties>
