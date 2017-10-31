@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{4C0803B8-58DF-0723-8CF8-C400353CF78A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Mouse/MouseManager.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Mouse/MouseManager.cs" Line="21" Column="48" />
+      <File FileName="Assets/Scripts/Camera/CameraControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="40" Column="39" />
+      <File FileName="Assets/Scripts/Managers/TankManager.cs" Line="28" Column="5" />
+      <File FileName="Assets/MouseSelected.cs" Line="21" Column="47" />
+      <File FileName="Assets/Scripts/Tank/TankHealth.cs" Line="7" Column="19" />
+      <File FileName="Assets/Scripts/Tank/TankShooting.cs" Line="98" Column="72" />
+      <File FileName="Assets/Scripts/Shell/ShellExplosion.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.TankRTSGame PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

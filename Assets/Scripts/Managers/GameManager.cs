@@ -32,7 +32,14 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(GameLoop());
     }
-
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            foreach (TankManager tanks in m_Tanks)
+                tanks.DisableCanvas();
+        }
+    }
 
     private void SpawnAllTanks()
     {

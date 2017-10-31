@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEngine;
-
+using System.Collections.Generic;
 [Serializable]
 public class TankManager
 {
@@ -14,15 +14,25 @@ public class TankManager
 
     private TankMovement m_Movement;       
     private TankShooting m_Shooting;
+    private MouseSelected m_Mouse;
     private GameObject m_CanvasGameObject;
 
-
+    public void EnableCanvas()
+    {
+        m_CanvasGameObject.SetActive(true);
+    }
+    public void DisableCanvas()
+    {
+        m_CanvasGameObject.SetActive(false);
+    }
     public void Setup()
     {
+
         m_Movement = m_Instance.GetComponent<TankMovement>();
         m_Shooting = m_Instance.GetComponent<TankShooting>();
+        m_Mouse = m_Instance.GetComponent<MouseSelected>();
         m_CanvasGameObject = m_Instance.GetComponentInChildren<Canvas>().gameObject;
-
+        m_CanvasGameObject.SetActive(false);
         m_Movement.m_PlayerNumber = m_PlayerNumber;
         m_Shooting.m_PlayerNumber = m_PlayerNumber;
 
@@ -41,8 +51,8 @@ public class TankManager
     {
         m_Movement.enabled = false;
         m_Shooting.enabled = false;
+        m_Mouse.enabled = false;
 
-        m_CanvasGameObject.SetActive(false);
     }
 
 
@@ -50,8 +60,8 @@ public class TankManager
     {
         m_Movement.enabled = true;
         m_Shooting.enabled = true;
+        m_Mouse.enabled = true;
 
-        m_CanvasGameObject.SetActive(true);
     }
 
 
