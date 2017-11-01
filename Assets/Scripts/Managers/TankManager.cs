@@ -25,6 +25,7 @@ public class TankManager
     {
         m_CanvasGameObject.SetActive(false);
     }
+
     public void Setup()
     {
 
