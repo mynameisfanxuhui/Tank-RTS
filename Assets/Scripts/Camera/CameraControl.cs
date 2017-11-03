@@ -80,9 +80,9 @@ public class CameraControl : MonoBehaviour
 
             Vector3 desiredPosToTarget = targetLocalPos - desiredLocalPos;
 
-            size = Mathf.Max (size, Mathf.Abs (desiredPosToTarget.y));
+            size = Mathf.Max (size, Mathf.Abs(desiredPosToTarget.y) + 10f);
 
-            size = Mathf.Max (size, Mathf.Abs (desiredPosToTarget.x) / m_Camera.aspect);
+            size = Mathf.Max (size, Mathf.Abs(desiredPosToTarget.x) / m_Camera.aspect + 10f);
         }
         
         size += m_ScreenEdgeBuffer;
