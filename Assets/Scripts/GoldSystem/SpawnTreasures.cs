@@ -23,7 +23,7 @@ public class SpawnTreasures : MonoBehaviour {
     private void Update()
     {
          count++;
-        if(count>=30)
+        if(count>=300)
         {
             Transform element = position[Random.Range(0, position.Length)];
             Instantiate(treasure, element.position, Quaternion.identity);

@@ -22,7 +22,7 @@ public class MouseManager : MonoBehaviour {
         }
 		if (Input.GetMouseButtonDown (1)) 
 		{
-            
+            FactoryManager.isSelected = false;
             foreach (GameObject selected in selectedTank) 
 			{
                 

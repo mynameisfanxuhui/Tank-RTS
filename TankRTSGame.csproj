@@ -302,8 +302,10 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
+    <Compile Include="Assets\Scripts\GoldSystem\BuildTank.cs" />
     <Compile Include="Assets\Scripts\GoldSystem\SpawnTreasures.cs" />
     <Compile Include="Assets\Scripts\GoldSystem\Treasures.cs" />
+    <Compile Include="Assets\Scripts\Managers\FactoryManager.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\TankManager.cs" />
     <Compile Include="Assets\Scripts\Mouse\MouseManager.cs" />
