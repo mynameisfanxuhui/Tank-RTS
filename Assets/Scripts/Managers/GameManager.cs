@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public int m_NumRoundsToWin = 2;        
     private float m_StartDelay = 1f;         
     private float m_EndDelay = 3f;           
-    public CameraControl m_CameraControl;   
+    //public CameraControl m_CameraControl;   
     public Text m_MessageText;              
     public GameObject m_TankPrefab;         
     public TankManager[] m_Tanks;           
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         m_EndWait = new WaitForSeconds(m_EndDelay);
 
         SpawnAllTanks();
-        SetCameraTargets();
+        //SetCameraTargets();
 
         StartCoroutine(GameLoop());
     }
@@ -53,17 +53,17 @@ public class GameManager : MonoBehaviour
     }
 
 
-    private void SetCameraTargets()
-    {
-        Transform[] targets = new Transform[m_Tanks.Length];
+    //private void SetCameraTargets()
+    //{
+    //    Transform[] targets = new Transform[m_Tanks.Length];
 
-        for (int i = 0; i < targets.Length; i++)
-        {
-            targets[i] = m_Tanks[i].m_Instance.transform;
-        }
+    //    for (int i = 0; i < targets.Length; i++)
+    //    {
+    //        targets[i] = m_Tanks[i].m_Instance.transform;
+    //    }
 
-        m_CameraControl.m_Targets = targets;
-    }
+    //    m_CameraControl.m_Targets = targets;
+    //}
 
 
     private IEnumerator GameLoop()
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
     {
         ResetAllTanks();
         DisableTankControl();
-        m_CameraControl.SetStartPositionAndSize();
+        //m_CameraControl.SetStartPositionAndSize();
         m_RoundNumber++;
         m_MessageText.text = "ROUND " + m_RoundNumber;
         yield return m_StartWait;

@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseManager : MonoBehaviour {
-    public float pokeForce;
+    //public float pokeForce;
+    public float speed;
+   // public float rotateSpeed;
+    public float accuracy;
     public static List<GameObject> selectedTank;
-  //  
+    public Camera mainCam;
+    private Vector3 pointPosition;
     // Update is called once per frame
     private void Start()
     {
@@ -23,36 +27,42 @@ public class MouseManager : MonoBehaviour {
 		if (Input.GetMouseButtonDown (1)) 
 		{
             FactoryManager.isSelected = false;
-            foreach (GameObject selected in selectedTank) 
-			{
-                
-                //Vector3 temp = Input.mousePosition;
-                //temp.x = Input.mousePosition.x;
-                //temp.y = Camera.main.pixelHeight - Input.mousePosition.y;
-
-                //Vector3 targetPos = Camera.main.ScreenToWorldPoint(new Vector3(temp.x, temp.y, Camera.main.nearClipPlane));
-                //Debug.Log("targetpos="+targetPos);
-                Rigidbody rig = selected.GetComponent<Rigidbody> ();
-                //Vector3 dir = cursorOnTransform;
-				//dir.y = 0;
-                RaycastHit hit;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow);
-                Debug.Log(Input.mousePosition);
-                Debug.Log(ray.direction);
-
-                if (Physics.Raycast(ray, out hit))
+            RaycastHit hit;
+            Ray ray = mainCam.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));
+            if (Physics.Raycast(ray, out hit))
+            {
                 if (hit.collider != null)
                 {
-                    Vector3 forcePos = hit.point - transform.position;
-                    rig.velocity = forcePos;
-                    Debug.Log("velocity="+rig.velocity);
+                    foreach (GameObject tank in selectedTank)
+                    {
+                        Transform trans = tank.GetComponent<Transform>();
+                        Vector3 forcePos = hit.point - tank.transform.position;
+                        forcePos = new Vector3(forcePos.x, 0, forcePos.z);
+                        //float step = rotateSpeed * Time.deltaTime;
+                        //Vector3 newDir = Vector3.RotateTowards(trans.forward, forcePos, step, 0.0F);
+                        //trans.rotation = Quaternion.LookRotation(newDir);
+                        trans.LookAt(hit.point);
+                        forcePos = forcePos.normalized * speed;
+                        Rigidbody rigid = tank.GetComponent<Rigidbody>();
+                        rigid.velocity = forcePos;
+                    }
 
+                    //transform.position = Vector3.MoveTowards(transform.position, hit.point, 5);
+                    //rig.AddForceAtPosition(forcePos,hit.point);
+                    pointPosition = hit.point;
+                    //Debug.Log("velocity=" + rig.velocity);
                 }
-                        
-                //rig.AddForce(dir);
-			}
-		}
+            }
+                
+        }
+        foreach (GameObject tank in selectedTank)
+        {
+            if (Mathf.Abs(tank.transform.position.x - pointPosition.x) < accuracy && Mathf.Abs(tank.transform.position.z - pointPosition.z) < accuracy)
+            {
+                Rigidbody rig = tank.GetComponent<Rigidbody>();
+                rig.velocity = Vector3.zero;
+            }
+        }
     }
     //private static Vector3 cursorWorldPosOnNCP
     //{
