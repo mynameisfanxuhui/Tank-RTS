@@ -14,6 +14,7 @@ public class FactoryManager : MonoBehaviour {
         m_CanvasGameObject.SetActive(false);
         factory = this.gameObject;
         isSelected = false;
+
 	}
     void Update()
     {
@@ -29,6 +30,7 @@ public class FactoryManager : MonoBehaviour {
         {
             endPosition = Input.mousePosition;
             //Debug.Log (endPosition+"end");
+
             Rect selectionBox = new Rect(Mathf.Min(startPosition.x, endPosition.x),
                 Mathf.Min(startPosition.y, endPosition.y),
                 Mathf.Abs(startPosition.x - endPosition.x),

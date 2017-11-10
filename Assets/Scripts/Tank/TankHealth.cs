@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class TankHealth : MonoBehaviour
 {
+#region Variables
+    #region var
     public float m_StartingHealth = 100f;          
     public Slider m_Slider;                        
     public Image m_FillImage;                      
@@ -18,6 +20,8 @@ public class TankHealth : MonoBehaviour
     
     private bool m_Dead;
 
+    #endregion
+    #endregion
     public float CurrentHealth
     {
         get
